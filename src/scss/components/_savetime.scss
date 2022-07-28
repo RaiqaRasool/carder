@@ -1,5 +1,5 @@
 $anim-time: 3s;
-$color-func: step-end;
+$color-func: ease-in-out;
 $anim-func: ease-in-out;
 $delay: 2s;
 
@@ -17,6 +17,10 @@ $delay: 2s;
             display: flex;
             flex-direction: column;
             row-gap: 24px;
+
+            @include tablet-and-smaller {
+                text-align: center;
+            }
 
             .heading {
                 font-weight: $weight-700;
@@ -42,14 +46,11 @@ $delay: 2s;
                 .box {
                     position: absolute;
                     border-radius: 9.86527px;
+                    background-color: #E6F2FF;
                     animation: boxanim $anim-time $color-func $delay infinite;
                 }
 
                 @keyframes boxanim {
-                    0% {
-                        background-color: #E6F2FF;
-
-                    }
 
                     30% {
                         background-color: #C8FACD;
@@ -202,4 +203,51 @@ $delay: 2s;
 
         }
     }
+}
+
+.container-two {
+    @include space-between;
+    flex-wrap: wrap;
+
+    .content-box {
+        width: 49%;
+    }
+
+    .image-box {
+        width: 49%;
+    }
+
+    @include tablet-and-smaller {
+        .content-box {
+            width: 100%;
+        }
+
+        .image-box {
+            width: 100%;
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 24px;
+
+    @include tablet-and-smaller {
+        @include center;
+    }
+
+    .save-btn {
+        background-color: $blue;
+        color: $white;
+        font-size: 20px;
+        font-weight: $weight-700;
+        padding: 16px 32px;
+        border-radius: 8px;
+    }
+
 }

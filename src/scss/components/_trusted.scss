@@ -7,6 +7,8 @@
     ;
 
     .trusted-container {
+        @include center;
+
         .content-box {
             @include center;
             flex-direction: column;
@@ -14,6 +16,11 @@
             padding: 192px 0px;
             text-align: center;
             gap: 24px;
+            width: 90%;
+
+            @include phone-only {
+                width: 90%;
+            }
 
             @include tablet-and-smaller {
                 padding: 144px 0px;
@@ -22,6 +29,7 @@
             .heading {
                 color: $dark-blue;
                 font-size: $font-36;
+                font-weight: $weight-700;
             }
 
             .quote {

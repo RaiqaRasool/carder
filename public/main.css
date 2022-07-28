@@ -176,7 +176,7 @@
 }
 .hero .hero-container .content-box .hero-heading {
   font-weight: 700;
-  font-size: 2.25rem;
+  font-size: 3.5rem;
 }
 .hero .hero-container .content-box .hero-subheading {
   font-size: 1.5rem;
@@ -238,6 +238,11 @@
   flex-direction: column;
   row-gap: 24px;
 }
+@media (max-width: 800px) {
+  .save-time .save-time-container .content-box {
+    text-align: center;
+  }
+}
 .save-time .save-time-container .content-box .heading {
   font-weight: 700;
   font-size: 2.25rem;
@@ -257,13 +262,11 @@
 .save-time .save-time-container .animation-box .animation-container .box {
   position: absolute;
   border-radius: 9.86527px;
-  -webkit-animation: boxanim 3s step-end 2s infinite;
-          animation: boxanim 3s step-end 2s infinite;
+  background-color: #E6F2FF;
+  -webkit-animation: boxanim 3s ease-in-out 2s infinite;
+          animation: boxanim 3s ease-in-out 2s infinite;
 }
 @-webkit-keyframes boxanim {
-  0% {
-    background-color: #E6F2FF;
-  }
   30% {
     background-color: #C8FACD;
   }
@@ -278,9 +281,6 @@
   }
 }
 @keyframes boxanim {
-  0% {
-    background-color: #E6F2FF;
-  }
   30% {
     background-color: #C8FACD;
   }
@@ -301,8 +301,8 @@
   border: 8.22106px solid #FFFFFF;
   z-index: 10;
   left: -20px;
-  -webkit-animation: box1-anim 3s ease-in-out 2s infinite, box1-color 3s step-end 2s infinite;
-          animation: box1-anim 3s ease-in-out 2s infinite, box1-color 3s step-end 2s infinite;
+  -webkit-animation: box1-anim 3s ease-in-out 2s infinite, box1-color 3s ease-in-out 2s infinite;
+          animation: box1-anim 3s ease-in-out 2s infinite, box1-color 3s ease-in-out 2s infinite;
 }
 @-webkit-keyframes box1-anim {
   0% {
@@ -377,8 +377,8 @@
   top: 85px;
   width: 122.74px;
   height: 32.53px;
-  -webkit-animation: box3-anim 3s ease-in-out 2s infinite, box2-color 3s step-end 2s infinite;
-          animation: box3-anim 3s ease-in-out 2s infinite, box2-color 3s step-end 2s infinite;
+  -webkit-animation: box3-anim 3s ease-in-out 2s infinite, box2-color 3s ease-in-out 2s infinite;
+          animation: box3-anim 3s ease-in-out 2s infinite, box2-color 3s ease-in-out 2s infinite;
 }
 @-webkit-keyframes box3-anim {
   0% {
@@ -446,6 +446,52 @@
   top: 128px;
   width: 122.74px;
   height: 51.76px;
+}
+
+.container-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-two .content-box {
+  width: 49%;
+}
+.container-two .image-box {
+  width: 49%;
+}
+@media (max-width: 800px) {
+  .container-two .content-box {
+    width: 100%;
+  }
+  .container-two .image-box {
+    width: 100%;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin-top: 24px;
+}
+@media (max-width: 800px) {
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.btn .save-btn {
+  background-color: #007AFF;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 8px;
 }
 
 .innovation {
@@ -614,6 +660,11 @@
   background-position: center center;
   background-color: #F9F9F9;
 }
+.trusted .trusted-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .trusted .trusted-container .content-box {
   display: flex;
   justify-content: center;
@@ -623,6 +674,12 @@
   padding: 192px 0px;
   text-align: center;
   gap: 24px;
+  width: 90%;
+}
+@media (max-width: 468px) {
+  .trusted .trusted-container .content-box {
+    width: 90%;
+  }
 }
 @media (max-width: 800px) {
   .trusted .trusted-container .content-box {
@@ -632,6 +689,7 @@
 .trusted .trusted-container .content-box .heading {
   color: #142558;
   font-size: 2.25rem;
+  font-weight: 700;
 }
 .trusted .trusted-container .content-box .quote {
   opacity: 0.7;
@@ -832,50 +890,4 @@ body ul {
   .container {
     width: 85%;
   }
-}
-
-.container-two {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.container-two .content-box {
-  width: 69%;
-}
-.container-two .image-box {
-  width: 29%;
-}
-@media (max-width: 800px) {
-  .container-two .content-box {
-    width: 100%;
-  }
-  .container-two .image-box {
-    width: 100%;
-  }
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn {
-  margin-top: 24px;
-}
-@media (max-width: 800px) {
-  .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.btn .save-btn {
-  background-color: #007AFF;
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 16px 32px;
-  border-radius: 8px;
 }/*# sourceMappingURL=main.css.map */
