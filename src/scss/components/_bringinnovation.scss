@@ -1,0 +1,109 @@
+.innovation {
+    background: #F2F2F7;
+    @include padding-96;
+
+    .innovation-container {
+        .top {
+            text-align: center;
+            margin-bottom: 42px;
+
+            .heading {
+                font-size: $font-36;
+                color: $blue;
+                font-weight: $weight-600;
+            }
+
+            .subheading {
+                margin-top: 8px;
+                font-size: $font-20;
+                opacity: 0.7;
+
+            }
+        }
+
+        .box-container {
+            @include space-between;
+            row-gap: 48px;
+            column-gap: 24px;
+            align-items: stretch;
+
+
+            @include width-1024 {
+                justify-content: flex-start;
+            }
+
+            @include width-1024 {
+                column-gap: 1%;
+                row-gap: 24px;
+                justify-content: space-between;
+            }
+
+            flex-wrap: wrap;
+
+            .box {
+                width: 31%;
+                background-color: $white;
+                border: 1px solid #F2F2F7;
+                border-radius: 16px;
+
+                @include width-1024 {
+                    width: 98%;
+                }
+
+                padding: 24px;
+
+                .tag {
+                    font-size: 1rem;
+                    font-weight: $weight-700;
+                }
+
+                .tag-blue {
+                    color: $blue;
+                }
+
+                .tag-yellow {
+                    color: $yellow;
+                }
+
+                .title {
+                    color: $dark-blue;
+                    font-weight: $weight-700;
+                    font-size: $font-20;
+                }
+
+                .body {
+                    font-size: $font-20;
+                    opacity: 0.7;
+
+                }
+
+            }
+
+            .missing-box {
+                border: 1px dashed $blue;
+                @include center;
+                gap: $font-24;
+                text-align: center;
+                flex-direction: column;
+
+                .heading {
+                    color: $dark-blue;
+                    font-weight: $weight-700;
+                    font-size: $font-20;
+
+                }
+
+                .request-btn {
+                    padding: 0.5rem 1.5rem;
+                    background-color: $blue;
+                    border-radius: 8px;
+                    color: $white;
+                    font-size: $font-20;
+                    font-weight: $weight-700;
+                }
+            }
+        }
+
+    }
+
+}

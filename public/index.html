@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./main.css">
+    <script src="index.js" defer></script>
+    <title>Carder App</title>
+</head>
+
+<body>
+    <!-- header sections starts here -->
+    <header class="header center">
+        <div class="header-container container">
+            <div class="logo">
+                <svg width="49" height="28" viewBox="0 0 49 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8462 20.9586C10.0109 20.9586 6.88749 17.8352 6.88749 14C6.88749 10.1647 10.0109 7.0413 13.8462 7.0413C16.0234 7.0413 17.9703 8.04616 19.2473 9.61626L24.64 5.34141C22.1028 2.18447 18.2089 0.153809 13.8462 0.153809C6.21339 0.153809 0 6.36302 0 14C0 21.6327 6.20921 27.8461 13.8462 27.8461C18.2634 27.8461 22.2033 25.7652 24.7363 22.5329L19.3436 18.2581C18.0708 19.8993 16.082 20.9586 13.8462 20.9586Z"
+                        fill="#20376F" />
+                    <path
+                        d="M26.5371 17.1067V27.3018H33.4246V17.1067C33.4246 11.559 37.9381 7.0413 43.49 7.0413V0.153809C34.1406 0.153809 26.5371 7.75726 26.5371 17.1067Z"
+                        fill="#20376F" />
+                    <path
+                        d="M43.4893 27.7414C46.137 27.7414 48.2834 25.595 48.2834 22.9473C48.2834 20.2997 46.137 18.1533 43.4893 18.1533C40.8417 18.1533 38.6953 20.2997 38.6953 22.9473C38.6953 25.595 40.8417 27.7414 43.4893 27.7414Z"
+                        fill="#007AFF" />
+                </svg>
+            </div>
+            <nav class="nav nav-appear" id="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Use Cases</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Product</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link">Blog</a></li>
+                </ul>
+                <div class="non-menu">
+                    <div class="lang">
+                        <svg width="54" height="16" viewBox="0 0 54 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1202_2313)">
+                                <path
+                                    d="M8 0C6.41775 0 4.87104 0.469192 3.55544 1.34824C2.23985 2.22729 1.21447 3.47672 0.608967 4.93853C0.00346629 6.40034 -0.15496 8.00887 0.153721 9.56072C0.462403 11.1126 1.22433 12.538 2.34315 13.6569C3.46197 14.7757 4.88743 15.5376 6.43928 15.8463C7.99113 16.155 9.59966 15.9965 11.0615 15.391C12.5233 14.7855 13.7727 13.7602 14.6518 12.4446C15.5308 11.129 16 9.58225 16 8C15.9977 5.87897 15.1541 3.84547 13.6543 2.34568C12.1545 0.845886 10.121 0.00229405 8 0V0ZM14.6667 8C14.6675 9.30647 14.282 10.584 13.5587 11.672L12.764 10.8767C12.7017 10.8142 12.6667 10.7296 12.6667 10.6413V10C12.6667 9.46957 12.456 8.96086 12.0809 8.58579C11.7058 8.21071 11.1971 8 10.6667 8H8.66667C8.48986 8 8.32029 7.92976 8.19527 7.80474C8.07024 7.67971 8 7.51015 8 7.33333V7C8 6.9116 8.03512 6.82681 8.09764 6.7643C8.16015 6.70179 8.24493 6.66667 8.33334 6.66667C8.77536 6.66667 9.19929 6.49107 9.51185 6.17851C9.82441 5.86595 10 5.44203 10 5V4.33333C10 4.24493 10.0351 4.16014 10.0976 4.09763C10.1601 4.03512 10.2449 4 10.3333 4H11.2527C11.6943 3.99874 12.1176 3.82339 12.4307 3.512L12.682 3.26067C13.3108 3.87939 13.8101 4.61709 14.1509 5.43078C14.4916 6.24447 14.667 7.11785 14.6667 8ZM1.366 8.642L3.47134 10.7473C3.65661 10.9338 3.87706 11.0816 4.1199 11.1822C4.36275 11.2828 4.62315 11.3342 4.886 11.3333H6.66667C6.84348 11.3333 7.01305 11.4036 7.13807 11.5286C7.2631 11.6536 7.33334 11.8232 7.33334 12V14.6327C5.80013 14.4762 4.36827 13.7941 3.28062 12.7022C2.19298 11.6103 1.51652 10.1758 1.366 8.642ZM8.66667 14.6327V12C8.66667 11.4696 8.45596 10.9609 8.08088 10.5858C7.70581 10.2107 7.1971 10 6.66667 10H4.886C4.79835 10.0001 4.71154 9.98285 4.63055 9.94934C4.54956 9.91582 4.47597 9.86666 4.414 9.80467L1.442 6.83267C1.63279 5.74813 2.08983 4.72793 2.77212 3.86359C3.45441 2.99925 4.34061 2.31781 5.3512 1.88041C6.36179 1.44301 7.46516 1.26334 8.56231 1.35752C9.65946 1.4517 10.7161 1.81678 11.6373 2.42L11.488 2.56933C11.4253 2.63122 11.3408 2.66615 11.2527 2.66667H10.3333C9.89131 2.66667 9.46739 2.84226 9.15483 3.15482C8.84227 3.46738 8.66667 3.89131 8.66667 4.33333V5C8.66667 5.08841 8.63155 5.17319 8.56904 5.2357C8.50653 5.29821 8.42174 5.33333 8.33334 5.33333C7.89131 5.33333 7.46739 5.50893 7.15483 5.82149C6.84227 6.13405 6.66667 6.55797 6.66667 7V7.33333C6.66667 7.86377 6.87738 8.37248 7.25246 8.74755C7.62753 9.12262 8.13624 9.33333 8.66667 9.33333H10.6667C10.8435 9.33333 11.0131 9.40357 11.1381 9.5286C11.2631 9.65362 11.3333 9.82319 11.3333 10V10.6413C11.3346 11.0829 11.5099 11.5062 11.8213 11.8193L12.7127 12.7107C11.627 13.8001 10.1971 14.4794 8.66667 14.6327Z"
+                                    fill="#142558" />
+                            </g>
+                            <path
+                                d="M26.132 13L25.196 10.348H22.016L21.092 13H20L23.12 4.396H24.128L27.236 13H26.132ZM24.884 9.388L23.996 6.796C23.972 6.732 23.936 6.616 23.888 6.448C23.84 6.28 23.788 6.108 23.732 5.932C23.676 5.748 23.636 5.608 23.612 5.512C23.556 5.76 23.492 6.004 23.42 6.244C23.356 6.476 23.3 6.66 23.252 6.796L22.364 9.388H24.884ZM31.0582 6.448C31.1702 6.448 31.2902 6.456 31.4182 6.472C31.5462 6.48 31.6582 6.496 31.7542 6.52L31.6342 7.492C31.5382 7.468 31.4302 7.448 31.3102 7.432C31.1982 7.416 31.0902 7.408 30.9862 7.408C30.6822 7.408 30.3942 7.5 30.1222 7.684C29.8582 7.86 29.6422 8.112 29.4742 8.44C29.3142 8.76 29.2342 9.136 29.2342 9.568V13H28.1902V6.568H29.0422L29.1622 7.744H29.2102C29.4022 7.392 29.6542 7.088 29.9662 6.832C30.2782 6.576 30.6422 6.448 31.0582 6.448ZM34.971 6.46C35.707 6.46 36.255 6.632 36.615 6.976C36.983 7.32 37.167 7.868 37.167 8.62V13H36.411L36.207 12.088H36.159C35.895 12.44 35.619 12.7 35.331 12.868C35.043 13.036 34.643 13.12 34.131 13.12C33.587 13.12 33.131 12.968 32.763 12.664C32.403 12.352 32.223 11.868 32.223 11.212C32.223 10.572 32.459 10.08 32.931 9.736C33.403 9.384 34.131 9.192 35.115 9.16L36.135 9.124V8.74C36.135 8.204 36.027 7.832 35.811 7.624C35.603 7.416 35.303 7.312 34.911 7.312C34.599 7.312 34.299 7.364 34.011 7.468C33.723 7.564 33.455 7.676 33.207 7.804L32.883 7.012C33.155 6.86 33.471 6.732 33.831 6.628C34.191 6.516 34.571 6.46 34.971 6.46ZM36.135 9.856L35.259 9.892C34.523 9.924 34.011 10.052 33.723 10.276C33.443 10.5 33.303 10.816 33.303 11.224C33.303 11.584 33.403 11.848 33.603 12.016C33.803 12.184 34.063 12.268 34.383 12.268C34.879 12.268 35.295 12.12 35.631 11.824C35.967 11.52 36.135 11.056 36.135 10.432V9.856ZM40.074 3.88V6.1C40.074 6.372 40.066 6.628 40.05 6.868C40.034 7.1 40.022 7.284 40.014 7.42H40.074C40.242 7.148 40.474 6.92 40.77 6.736C41.074 6.552 41.462 6.46 41.934 6.46C42.686 6.46 43.286 6.74 43.734 7.3C44.19 7.852 44.418 8.68 44.418 9.784C44.418 10.888 44.19 11.72 43.734 12.28C43.278 12.84 42.678 13.12 41.934 13.12C41.462 13.12 41.074 13.028 40.77 12.844C40.474 12.66 40.242 12.44 40.074 12.184H39.99L39.786 13H39.03V3.88H40.074ZM41.742 7.336C41.11 7.336 40.674 7.532 40.434 7.924C40.194 8.316 40.074 8.924 40.074 9.748V9.796C40.074 10.588 40.19 11.196 40.422 11.62C40.662 12.036 41.11 12.244 41.766 12.244C42.286 12.244 42.678 12.032 42.942 11.608C43.206 11.184 43.338 10.572 43.338 9.772C43.338 8.148 42.806 7.336 41.742 7.336ZM46.5193 4.156C46.6793 4.156 46.8193 4.212 46.9393 4.324C47.0593 4.428 47.1193 4.596 47.1193 4.828C47.1193 5.06 47.0593 5.232 46.9393 5.344C46.8193 5.448 46.6793 5.5 46.5193 5.5C46.3513 5.5 46.2073 5.448 46.0873 5.344C45.9673 5.232 45.9073 5.06 45.9073 4.828C45.9073 4.596 45.9673 4.428 46.0873 4.324C46.2073 4.212 46.3513 4.156 46.5193 4.156ZM47.0353 6.568V13H45.9913V6.568H47.0353ZM51.3684 13.12C50.8244 13.12 50.3444 13.004 49.9284 12.772C49.5124 12.54 49.1844 12.18 48.9444 11.692C48.7124 11.204 48.5964 10.58 48.5964 9.82C48.5964 9.028 48.7204 8.384 48.9684 7.888C49.2164 7.392 49.5524 7.028 49.9764 6.796C50.4084 6.564 50.8964 6.448 51.4404 6.448C51.7524 6.448 52.0524 6.484 52.3404 6.556C52.6364 6.62 52.8764 6.7 53.0604 6.796L52.7364 7.672C52.5524 7.6 52.3364 7.532 52.0884 7.468C51.8484 7.404 51.6244 7.372 51.4164 7.372C50.2564 7.372 49.6764 8.184 49.6764 9.808C49.6764 10.584 49.8164 11.18 50.0964 11.596C50.3844 12.004 50.8084 12.208 51.3684 12.208C51.6964 12.208 51.9884 12.172 52.2444 12.1C52.5004 12.028 52.7364 11.94 52.9524 11.836V12.772C52.7444 12.884 52.5164 12.968 52.2684 13.024C52.0204 13.088 51.7204 13.12 51.3684 13.12Z"
+                                fill="#142558" />
+                            <defs>
+                                <clipPath id="clip0_1202_2313">
+                                    <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="nav-btns">
+                        <a href="#" class="login">Login</a>
+                        <a href="#" class="sign-up">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+            <div id="menu-icon">
+                <i id="actual-menu-icon" class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+    </header>
+    <!-- header sections ends here -->
+
+    <!-- hero section starts here -->
+    <section class="center hero" id="hero">
+        <div class="container hero-container">
+            <div class="image-box">
+                <svg class="back-img" width="321.6" height="504">
+                    <image xlink:href="./assets/img/hero/back.png" alt="back-image" />
+                    <image class="front-img" xlink:href="./assets/img/hero/front.png" alt="front-image" />
+                </svg>
+
+            </div>
+            <div class="content-box">
+                <h1 class="hero-heading">
+                    Create your card in no time, make a smooth impression
+                </h1>
+                <p class="hero-subheading">
+                    Create a digital business card, Build your microsite, promote your brand, and keep customers coming
+                    back
+                </p>
+                <div class="purchase-btns hero-btns">
+                    <a href="#" class="btn apple-btn">
+                        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.7973 11.6924C14.819 10.0114 15.7217 8.42082 17.1539 7.54036C16.2504 6.25004 14.7371 5.43194 13.1627 5.38268C11.4835 5.20642 9.85552 6.38751 8.99981 6.38751C8.12754 6.38751 6.81004 5.40018 5.39131 5.42937C3.54206 5.48911 1.81809 6.5405 0.918393 8.15724C-1.01561 11.5057 0.426982 16.4267 2.27959 19.1333C3.20649 20.4587 4.28977 21.9391 5.70722 21.8866C7.09428 21.8291 7.61232 21.0021 9.28662 21.0021C10.9454 21.0021 11.4314 21.8866 12.8776 21.8532C14.366 21.8291 15.3038 20.522 16.1981 19.1841C16.8641 18.2397 17.3766 17.196 17.7166 16.0916C15.9674 15.3518 14.7994 13.5916 14.7973 11.6924Z"
+                                fill="#282828" />
+                            <path
+                                d="M12.0656 3.60268C12.8772 2.62847 13.277 1.37629 13.1802 0.112061C11.9403 0.242281 10.7951 0.83484 9.97259 1.77167C9.1683 2.687 8.74975 3.91715 8.82888 5.13306C10.0692 5.14583 11.2885 4.56933 12.0656 3.60268Z"
+                                fill="#282828" />
+                        </svg>
+                        <div class="btn-content">
+                            <div class="top-content">
+                                Download on the
+                            </div>
+                            <div class="bottom-content">
+                                App Store
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="btn google-btn">
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_ii_1201_3800)">
+                                <path
+                                    d="M1.1798 0.396975C0.888798 0.704975 0.716796 1.18298 0.716796 1.80198V23.918C0.716796 24.538 0.888798 25.015 1.1798 25.323L1.2538 25.395L13.6428 13.006V12.86V12.714L1.2538 0.323975L1.1798 0.396975Z"
+                                    fill="url(#paint0_linear_1201_3800)" />
+                                <path
+                                    d="M17.7716 17.137L13.6426 13.006V12.86V12.714L17.7726 8.58398L17.8656 8.63698L22.7586 11.417C24.1556 12.211 24.1556 13.51 22.7586 14.305L17.8656 17.085L17.7716 17.137Z"
+                                    fill="url(#paint1_linear_1201_3800)" />
+                                <g filter="url(#filter1_i_1201_3800)">
+                                    <path
+                                        d="M17.8676 17.0834L13.6436 12.8594L1.18164 25.3224C1.64164 25.8104 2.40264 25.8704 3.25964 25.3844L17.8676 17.0834Z"
+                                        fill="url(#paint2_linear_1201_3800)" />
+                                </g>
+                                <path
+                                    d="M17.8676 8.63608L3.25964 0.336075C2.40264 -0.150925 1.64164 -0.0899245 1.18164 0.398075L13.6446 12.8611L17.8676 8.63608Z"
+                                    fill="url(#paint3_linear_1201_3800)" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_ii_1201_3800" x="0.716797" y="0" width="23.0898" height="25.72"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="-0.15" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1201_3800" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="0.15" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="effect1_innerShadow_1201_3800"
+                                        result="effect2_innerShadow_1201_3800" />
+                                </filter>
+                                <filter id="filter1_i_1201_3800" x="1.18164" y="12.8594" width="16.6855"
+                                    height="12.8606" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="-0.15" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1201_3800" />
+                                </filter>
+                                <linearGradient id="paint0_linear_1201_3800" x1="12.5446" y1="1.56797" x2="-4.2374"
+                                    y2="18.35" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00A0FF" />
+                                    <stop offset="0.0066" stop-color="#00A1FF" />
+                                    <stop offset="0.2601" stop-color="#00BEFF" />
+                                    <stop offset="0.5122" stop-color="#00D2FF" />
+                                    <stop offset="0.7604" stop-color="#00DFFF" />
+                                    <stop offset="1" stop-color="#00E3FF" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1201_3800" x1="24.5771" y1="12.86" x2="0.381179"
+                                    y2="12.86" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFE000" />
+                                    <stop offset="0.4087" stop-color="#FFBD00" />
+                                    <stop offset="0.7754" stop-color="#FFA500" />
+                                    <stop offset="1" stop-color="#FF9C00" />
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_1201_3800" x1="15.5737" y1="15.1533" x2="-7.18476"
+                                    y2="37.9118" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF3A44" />
+                                    <stop offset="1" stop-color="#C31162" />
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_1201_3800" x1="-1.95696" y1="-6.96412" x2="8.20534"
+                                    y2="3.19818" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#32A071" />
+                                    <stop offset="0.0685" stop-color="#2DA771" />
+                                    <stop offset="0.4762" stop-color="#15CF74" />
+                                    <stop offset="0.8009" stop-color="#06E775" />
+                                    <stop offset="1" stop-color="#00F076" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="btn-content">
+                            <div class="top-content">
+                                Get it On
+                            </div>
+                            <div class="bottom-content">
+                                Google Play
+                            </div>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section ends here -->
+
+    <!-- save time section starts here -->
+    <section class="center save-time" id="save-time">
+        <div class="container container-two save-time-container">
+            <div class="content-box">
+                <div class="heading">
+                    Save time, save money - do all the work in one place!
+                </div>
+                <div class="subheading">
+                    No need to spend hours on designing a professional looking business card - let <b>Carder</b> do all
+                    the
+                    work for you!
+                </div>
+                <div class="btn">
+                    <a href="#" class="save-btn">
+                        Try Carder for free
+                    </a>
+                </div>
+            </div>
+            <div class="image-box animation-box center ">
+                <div class="animation-container">
+                    <div class="box" id="box1"></div>
+                    <div class="box" id="box2"></div>
+                    <div class="box" id="box3"></div>
+                    <div class="box" id="box4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- save time section ends here -->
+
+    <!-- bring inovation section starts here -->
+    <section class="center innovation">
+        <div class="container innovation-container">
+            <div class="top">
+                <div class="heading">
+                    Bringing innovation to business digitalization
+                </div>
+                <div class="subheading">
+                    Our features roadmap
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box">
+                    <div class="tag tag-blue">
+                        <span class="text">Live</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Easy to use editor
+                    </div>
+                    <div class="body">
+                        You can create your digital business card in a few minutes with our hustle-free editor.
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-blue">
+                        <span class="text">Live</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        RTL Support </div>
+                    <div class="body">
+                        Carder now supports RTL , LTR, and Centered layouts Arabic language in cards. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-blue">
+                        <span class="text">Live</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Dark Mode </div>
+                    <div class="body">
+                        Now your card visitors will see your card in light and dark modes according to phone theme.
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-blue">
+                        <span class="text">Live</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Sharing Options </div>
+                    <div class="body">
+                        Your card now has a unique web link, QR code, and a downloadable VCF contact file. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-blue">
+                        <span class="text">Live</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Mobile applications </div>
+                    <div class="body">
+                        Carder mobile application is available now to use on Android and IOS devices. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-blue">
+                        <span class="text">Live</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Professional Plan </div>
+                    <div class="body">
+                        We’ve removed the limitations, added insights, and a customizable card URL for this plan. </div>
+                </div>
+
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Web Application
+                    </div>
+                    <div class="body">
+                        The live application of Carder working on web browsers and desktop devices. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Multiple cards </div>
+                    <div class="body">
+                        Now you can add and manage multiple cards under one Carder account. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Business Profile </div>
+                    <div class="body">
+                        More powerful solutions customized for businesses of all scales. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        E-Commerce </div>
+                    <div class="body">
+                        Solutions to offer your products and services for sale or booking. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Image gallery </div>
+                    <div class="body">
+                        Add multiple images into your card for your peers to browse and view. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Advanced insights </div>
+                    <div class="body">
+                        Your account statistics now show more data about your cards performance. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        AI Micro-site builder </div>
+                    <div class="body">
+                        Build your one page website with a click, through a social profile or carder card. </div>
+                </div>
+                <div class="box">
+                    <div class="tag tag-yellow">
+                        <span class="text">Upcoming</span>
+                        <span class="status">*</span>
+                    </div>
+                    <div class="title">
+                        Enterprise team </div>
+                    <div class="body">
+                        More powerful solutions for big teams and corporate-size businesses. </div>
+                </div>
+                <div class="box missing-box">
+                    <div class="title">
+                        Missing a feature?
+                    </div>
+                    <a href="#" class="request-btn">
+                        Request now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bring inovation section ends here -->
+
+    <!-- do yourself section starts here -->
+    <section class="center doyourself">
+        <div class="container doyourself-container">
+            <div class="content-box">
+                <div class="heading">
+                    A complete do-it-yourself experience
+                </div>
+                <div class="body">
+                    It's all about you. You're in charge of what goes on your digital business card, from the color
+                    scheme, to the logo/photo, to the contact information.
+                </div>
+                <div class="btn">
+                    <a href="#" class="save-btn">
+                        Try Carder for Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- do yourself section ends here -->
+
+    <!-- trusted section starts here -->
+    <section class="center trusted">
+        <div class="container trusted-container">
+            <div class="content-box">
+                <div class="heading">
+                    Trusted by the big brands
+                </div>
+                <div class="quote">
+                    “I walk around with a digital business card all the time because it's just so convenient. I also use
+                    this app for my contact information. I love that it looks professional, sleek and modern and has a
+                    QR code for people to scan to contact me. It makes networking really easy!”
+                </div>
+                <div class="quoter">
+                    -Carrine, founder of Big and Brave
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- trusted section ends here -->
+
+    <!-- credit section starts here -->
+    <section class="center credit">
+        <div class="container credit-container">
+            <div class="image-box">
+                <div class="eclipse">
+                    <svg viewBox="0 0 353 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="176.5" cy="177.106" r="150.5" stroke="url(#paint0_linear_1201_3863)"
+                            stroke-width="52" style="mix-blend-mode:overlay" />
+                        <defs>
+                            <linearGradient id="paint0_linear_1201_3863" x1="107.5" y1="9.60644" x2="369" y2="112.106"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0.7" />
+                                <stop offset="1" stop-color="white" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="mobiles">
+                        <img src="./assets/img/credit-mob.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <div class="top">
+                    <div class="tag">
+                        Try now for free
+                    </div>
+                    <div class="heading">
+                        No credit card required
+                    </div>
+                </div>
+                <div class="body">
+                    Make a lasting impression to potential customers and clients with a professional digital business
+                    card
+                </div>
+                <div class="purchase-btns credit-btns">
+                    <a href="#" class="btn apple-btn">
+                        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.7973 11.6924C14.819 10.0114 15.7217 8.42082 17.1539 7.54036C16.2504 6.25004 14.7371 5.43194 13.1627 5.38268C11.4835 5.20642 9.85552 6.38751 8.99981 6.38751C8.12754 6.38751 6.81004 5.40018 5.39131 5.42937C3.54206 5.48911 1.81809 6.5405 0.918393 8.15724C-1.01561 11.5057 0.426982 16.4267 2.27959 19.1333C3.20649 20.4587 4.28977 21.9391 5.70722 21.8866C7.09428 21.8291 7.61232 21.0021 9.28662 21.0021C10.9454 21.0021 11.4314 21.8866 12.8776 21.8532C14.366 21.8291 15.3038 20.522 16.1981 19.1841C16.8641 18.2397 17.3766 17.196 17.7166 16.0916C15.9674 15.3518 14.7994 13.5916 14.7973 11.6924Z"
+                                fill="#282828" />
+                            <path
+                                d="M12.0656 3.60268C12.8772 2.62847 13.277 1.37629 13.1802 0.112061C11.9403 0.242281 10.7951 0.83484 9.97259 1.77167C9.1683 2.687 8.74975 3.91715 8.82888 5.13306C10.0692 5.14583 11.2885 4.56933 12.0656 3.60268Z"
+                                fill="#282828" />
+                        </svg>
+                        <div class="btn-content">
+                            <div class="top-content">
+                                Download on the
+                            </div>
+                            <div class="bottom-content">
+                                App Store
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="btn google-btn">
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_ii_1201_3800)">
+                                <path
+                                    d="M1.1798 0.396975C0.888798 0.704975 0.716796 1.18298 0.716796 1.80198V23.918C0.716796 24.538 0.888798 25.015 1.1798 25.323L1.2538 25.395L13.6428 13.006V12.86V12.714L1.2538 0.323975L1.1798 0.396975Z"
+                                    fill="url(#paint0_linear_1201_3800)" />
+                                <path
+                                    d="M17.7716 17.137L13.6426 13.006V12.86V12.714L17.7726 8.58398L17.8656 8.63698L22.7586 11.417C24.1556 12.211 24.1556 13.51 22.7586 14.305L17.8656 17.085L17.7716 17.137Z"
+                                    fill="url(#paint1_linear_1201_3800)" />
+                                <g filter="url(#filter1_i_1201_3800)">
+                                    <path
+                                        d="M17.8676 17.0834L13.6436 12.8594L1.18164 25.3224C1.64164 25.8104 2.40264 25.8704 3.25964 25.3844L17.8676 17.0834Z"
+                                        fill="url(#paint2_linear_1201_3800)" />
+                                </g>
+                                <path
+                                    d="M17.8676 8.63608L3.25964 0.336075C2.40264 -0.150925 1.64164 -0.0899245 1.18164 0.398075L13.6446 12.8611L17.8676 8.63608Z"
+                                    fill="url(#paint3_linear_1201_3800)" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_ii_1201_3800" x="0.716797" y="0" width="23.0898" height="25.72"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="-0.15" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1201_3800" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="0.15" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="effect1_innerShadow_1201_3800"
+                                        result="effect2_innerShadow_1201_3800" />
+                                </filter>
+                                <filter id="filter1_i_1201_3800" x="1.18164" y="12.8594" width="16.6855"
+                                    height="12.8606" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="-0.15" />
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0" />
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1201_3800" />
+                                </filter>
+                                <linearGradient id="paint0_linear_1201_3800" x1="12.5446" y1="1.56797" x2="-4.2374"
+                                    y2="18.35" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00A0FF" />
+                                    <stop offset="0.0066" stop-color="#00A1FF" />
+                                    <stop offset="0.2601" stop-color="#00BEFF" />
+                                    <stop offset="0.5122" stop-color="#00D2FF" />
+                                    <stop offset="0.7604" stop-color="#00DFFF" />
+                                    <stop offset="1" stop-color="#00E3FF" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1201_3800" x1="24.5771" y1="12.86" x2="0.381179"
+                                    y2="12.86" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFE000" />
+                                    <stop offset="0.4087" stop-color="#FFBD00" />
+                                    <stop offset="0.7754" stop-color="#FFA500" />
+                                    <stop offset="1" stop-color="#FF9C00" />
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_1201_3800" x1="15.5737" y1="15.1533" x2="-7.18476"
+                                    y2="37.9118" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF3A44" />
+                                    <stop offset="1" stop-color="#C31162" />
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_1201_3800" x1="-1.95696" y1="-6.96412" x2="8.20534"
+                                    y2="3.19818" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#32A071" />
+                                    <stop offset="0.0685" stop-color="#2DA771" />
+                                    <stop offset="0.4762" stop-color="#15CF74" />
+                                    <stop offset="0.8009" stop-color="#06E775" />
+                                    <stop offset="1" stop-color="#00F076" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="btn-content">
+                            <div class="top-content">
+                                Get it On
+                            </div>
+                            <div class="bottom-content">
+                                Google Play
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- credit section ends here -->
+
+    <!-- footer section starts here -->
+    <footer class="center footer">
+        <div class="container footer-container">
+            <div class="col col1">
+                <div class="footer-logo">
+                    <svg width="122" height="28" viewBox="0 0 122 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.0509 22.01C7.99189 22.01 5.49328 19.5206 5.49328 16.4525C5.49328 13.3935 7.98271 10.8949 11.0509 10.8949C12.787 10.8949 14.3395 11.6941 15.3591 12.9526L19.6674 9.54453C17.6373 7.01836 14.5324 5.40161 11.0509 5.40161C4.96048 5.40161 0 10.3621 0 16.4525C0 22.5428 4.96048 27.5033 11.0509 27.5033C14.5783 27.5033 17.72 25.8406 19.7409 23.2594L15.4326 19.8513C14.4221 21.1649 12.833 22.01 11.0509 22.01Z"
+                            fill="white" />
+                        <path
+                            d="M37.3326 6.90807C35.7067 5.95272 33.8052 5.40155 31.7843 5.40155C25.6939 5.40155 20.7334 10.362 20.7334 16.4524C20.7334 22.5428 25.6939 27.5033 31.7843 27.5033C33.8052 27.5033 35.7067 26.9521 37.3418 25.9967V27.0623H42.8351V5.38318H37.3418V6.90807H37.3326ZM31.7843 22.01C28.7253 22.01 26.2267 19.5206 26.2267 16.4524C26.2267 13.3934 28.7161 10.8948 31.7843 10.8948C34.8432 10.8948 37.3418 13.3843 37.3418 16.4524C37.3326 19.5206 34.8432 22.01 31.7843 22.01Z"
+                            fill="white" />
+                        <path
+                            d="M76.318 6.9081C74.6829 5.95274 72.7906 5.41077 70.7696 5.41077C64.6792 5.41077 59.7188 10.3713 59.7188 16.4616C59.7188 22.552 64.6792 27.5125 70.7696 27.5125C72.7906 27.5125 74.6921 26.9705 76.318 26.0152V27.0807H81.8113V0.606445H76.318V6.9081ZM70.7604 22.01C67.7015 22.01 65.212 19.5206 65.212 16.4616C65.212 13.4027 67.7015 10.904 70.7604 10.904C73.8194 10.904 76.3088 13.3935 76.3088 16.4616C76.3088 19.5298 73.8286 22.01 70.7604 22.01Z"
+                            fill="white" />
+                        <path
+                            d="M45.2969 18.9327V27.0716H50.7993V18.9327C50.7993 14.505 54.4003 10.9041 58.828 10.9041V5.40161C51.3689 5.40161 45.2969 11.4736 45.2969 18.9327Z"
+                            fill="white" />
+                        <path
+                            d="M104.179 9.47108C104.17 9.46189 104.161 9.4527 104.151 9.44352C104.142 9.43433 104.133 9.42515 104.124 9.40677C104.105 9.37922 104.078 9.35166 104.05 9.3241C104.032 9.30573 104.023 9.28736 104.004 9.26898C103.958 9.22305 103.913 9.15875 103.857 9.10363C103.821 9.06689 103.784 9.02096 103.747 8.98421C103.747 8.97503 103.738 8.97503 103.729 8.96584C103.619 8.84642 103.508 8.727 103.416 8.62596C102.084 7.29398 100.468 6.34781 98.7132 5.83339C98.6489 5.81502 98.5754 5.79664 98.5111 5.77827C98.3733 5.74153 98.2355 5.70478 98.0977 5.67722C98.0059 5.65885 97.9232 5.64048 97.8313 5.62211C97.7395 5.60374 97.6568 5.58536 97.5649 5.56699C97.4731 5.54862 97.3812 5.53943 97.2893 5.52106C97.124 5.4935 96.9586 5.47513 96.7933 5.45676C96.6831 5.44757 96.5728 5.43839 96.4626 5.4292C96.4075 5.42001 96.3524 5.42001 96.2973 5.42001C96.2513 5.41083 96.2054 5.41083 96.1686 5.41083C95.9849 5.40164 95.8012 5.39246 95.6175 5.39246C95.4338 5.39246 95.25 5.40164 95.0663 5.41083C95.0296 5.41083 94.9928 5.41083 94.9561 5.42001C94.8091 5.4292 94.6621 5.43839 94.5152 5.45676C94.506 5.45676 94.4968 5.45676 94.4876 5.45676C94.3406 5.47513 94.1936 5.4935 94.0467 5.51188C91.6858 5.84257 89.5087 6.92653 87.8001 8.63514C86.4222 10.0222 85.4485 11.7033 84.9524 13.5313C84.9157 13.6691 84.8789 13.8161 84.8422 13.9539C84.7963 14.1284 84.7595 14.3121 84.732 14.4959C84.7136 14.5877 84.7044 14.6796 84.686 14.7714C84.6585 14.946 84.6401 15.1297 84.6126 15.3042C84.6126 15.3226 84.6126 15.3318 84.6034 15.3502C84.585 15.4971 84.5758 15.6349 84.5666 15.7819C84.5666 15.8187 84.5574 15.8554 84.5574 15.8921C84.5482 16.0759 84.5391 16.2596 84.5391 16.4433C84.5391 19.4839 85.7792 22.2489 87.7817 24.2515C87.9104 24.3801 88.039 24.4995 88.1676 24.6189C88.2962 24.7383 88.434 24.8578 88.5718 24.968C88.7095 25.0782 88.8473 25.1885 88.9851 25.2987C89.0586 25.3538 89.1321 25.4089 89.1964 25.4549C89.3066 25.5375 89.4261 25.6202 89.5455 25.6937C91.2816 26.8328 93.3577 27.4942 95.5899 27.4942C98.5386 27.4942 101.313 26.3459 103.398 24.2607L99.5124 20.375C98.456 21.4222 97.0689 22.0009 95.5807 22.0009C95.4429 22.0009 95.3143 21.9917 95.1765 21.9825C95.0571 21.9733 94.9377 21.9641 94.8183 21.9458C94.6529 21.9182 94.4876 21.8907 94.3222 21.8539C94.2763 21.8447 94.2304 21.8355 94.1845 21.8172C93.8538 21.7345 93.5322 21.6151 93.2291 21.4773C93.1832 21.4589 93.1372 21.4314 93.0913 21.413C93.0178 21.3762 92.9535 21.3395 92.8892 21.3119C92.8433 21.2844 92.7974 21.2568 92.7514 21.2293C92.6412 21.165 92.5401 21.1007 92.4391 21.0272C92.3932 20.9904 92.338 20.9629 92.2921 20.9261C92.2737 20.9169 92.2646 20.9078 92.2462 20.8894C92.1727 20.8343 92.1084 20.7791 92.0349 20.724C92.0257 20.7148 92.0073 20.7057 91.9982 20.6965C91.9522 20.6597 91.9063 20.623 91.8696 20.5862C91.842 20.5587 91.8144 20.5403 91.7869 20.5127C91.741 20.476 91.695 20.4301 91.6583 20.3841C91.5205 20.2555 91.4011 20.1177 91.2816 19.9708C91.2541 19.9432 91.2265 19.9065 91.2082 19.8789C91.0336 19.6584 90.8775 19.4288 90.7397 19.19H106.613V16.4433C106.668 13.8069 105.741 11.3818 104.179 9.47108ZM90.7948 13.7059C91.447 12.5668 92.485 11.6849 93.7251 11.2348C93.7527 11.2256 93.7803 11.2164 93.8078 11.2072C93.8721 11.1797 93.9364 11.1613 94.0099 11.1429C94.111 11.1154 94.212 11.0878 94.3131 11.0603C94.3682 11.0419 94.4325 11.0327 94.4968 11.0235C94.6162 10.996 94.7356 10.9776 94.8642 10.9592C94.9744 10.9408 95.0847 10.9317 95.1949 10.9225H95.2041C95.2317 10.9225 95.25 10.9225 95.2776 10.9133C95.3235 10.9133 95.3694 10.9041 95.4154 10.9041C95.4889 10.9041 95.5532 10.9041 95.6175 10.9041C95.691 10.9041 95.7645 10.9041 95.8379 10.9133C95.8747 10.9133 95.9114 10.9133 95.9482 10.9225C95.9757 10.9225 96.0033 10.9225 96.04 10.9317C96.0584 10.9317 96.0676 10.9317 96.0768 10.9317C96.1135 10.9317 96.1595 10.9408 96.1962 10.9408C96.2605 10.95 96.3248 10.9592 96.3799 10.9592C96.4442 10.9684 96.5085 10.9776 96.5636 10.9868C96.7474 11.0235 96.9311 11.0603 97.1056 11.1062C97.3445 11.1705 97.5741 11.2532 97.7946 11.345C97.8497 11.3726 97.9048 11.391 97.9599 11.4185C98.015 11.4461 98.0702 11.4645 98.1253 11.5012C98.2906 11.5839 98.4468 11.6757 98.5938 11.7676C98.6673 11.8135 98.7407 11.8595 98.8142 11.9146C98.8877 11.9605 98.9612 12.0156 99.0347 12.0799C99.0806 12.1167 99.1266 12.1534 99.1725 12.1902C99.2184 12.2269 99.2643 12.2728 99.3103 12.3096C99.347 12.3463 99.393 12.3831 99.4297 12.4198C99.4389 12.429 99.4481 12.4382 99.4573 12.4474C99.494 12.4841 99.5399 12.5209 99.5767 12.5576C99.6134 12.5943 99.641 12.6219 99.6685 12.6586C99.7604 12.7597 99.8798 12.8975 99.9809 13.0169C99.9809 13.0169 99.9809 13.0169 99.9901 13.0261C100.155 13.2374 100.312 13.467 100.449 13.7059H90.7948Z"
+                            fill="white" />
+                        <path
+                            d="M108.479 18.9327V27.0716H113.972V18.9327C113.972 14.505 117.573 10.9041 122 10.9041V5.40161C114.551 5.40161 108.479 11.4736 108.479 18.9327Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <div class="copyright">
+                    &copy; 2022 Carder Technologies Ltd. All Rights Reserved.
+                </div>
+            </div>
+            <div class="col col2">
+                <div class="subcol subcol1">
+                    <div class="heading">
+                        Product
+                    </div>
+                    <ul class="footer-menu">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Use Cases</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="subcol subcol1">
+                    <div class="heading">
+                        Other links
+                    </div>
+                    <ul class="footer-menu">
+                        <li class="nav-item"><a href="#" class="nav-link">Terms of use</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col3">
+                <div class="content">
+                    <div class="heading">
+                        Follow us
+                    </div>
+                    <div class="share-icons">
+                        <div class="icon">
+                            <svg width="8" height="17" viewBox="0 0 8 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.9207 16.6064V8.60582H0.266602V5.84865H1.9207V4.19326C1.9207 1.94397 2.8547 0.606445 5.50832 0.606445H7.71754V3.36392H6.33662C5.30363 3.36392 5.2353 3.74924 5.2353 4.46835L5.23154 5.84834H7.73317L7.44044 8.60551H5.23154V16.6064H1.9207Z"
+                                    fill="#142558" />
+                            </svg>
+                        </div>
+                        <div class="icon">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3.4288 16.6064H0V6.32004H3.4288V16.6064Z" fill="#142558" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.70421 4.03532H1.68473C0.661499 4.03532 0 3.273 0 2.32029C0 1.34743 0.681646 0.606445 1.72429 0.606445C2.76694 0.606445 3.40902 1.34743 3.4288 2.32029C3.4288 3.273 2.76694 4.03532 1.70421 4.03532Z"
+                                    fill="#142558" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.9999 16.6062H12.6306V11.2293C12.6306 9.8788 12.143 8.95723 10.9232 8.95723C9.99237 8.95723 9.43791 9.5785 9.19439 10.1786C9.1053 10.3936 9.08343 10.6933 9.08343 10.9936V16.6064H5.71359C5.71359 16.6064 5.758 7.49936 5.71359 6.5563H9.08343V7.97982C9.53063 7.29551 10.3316 6.32004 12.1205 6.32004C14.3378 6.32004 16 7.75676 16 10.8437L15.9999 16.6062Z"
+                                    fill="#142558" />
+                            </svg>
+                        </div>
+                        <div class="icon">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.99305 4.96979C7.76723 4.96979 6.59162 5.45599 5.72484 6.32142C4.85806 7.18686 4.3711 8.36065 4.3711 9.58456C4.3711 10.8085 4.85806 11.9823 5.72484 12.8477C6.59162 13.7131 7.76723 14.1993 8.99305 14.1993C10.2189 14.1993 11.3945 13.7131 12.2613 12.8477C13.128 11.9823 13.615 10.8085 13.615 9.58456C13.615 8.36065 13.128 7.18686 12.2613 6.32142C11.3945 5.45599 10.2189 4.96979 8.99305 4.96979ZM8.99305 12.5816C8.19669 12.5816 7.43295 12.2657 6.86984 11.7035C6.30674 11.1412 5.99038 10.3787 5.99038 9.58356C5.99038 8.78844 6.30674 8.02589 6.86984 7.46365C7.43295 6.90142 8.19669 6.58556 8.99305 6.58556C9.78941 6.58556 10.5531 6.90142 11.1163 7.46365C11.6794 8.02589 11.9957 8.78844 11.9957 9.58356C11.9957 10.3787 11.6794 11.1412 11.1163 11.7035C10.5531 12.2657 9.78941 12.5816 8.99305 12.5816Z"
+                                    fill="#142558" />
+                                <path
+                                    d="M13.7984 5.87593C14.3935 5.87593 14.876 5.39426 14.876 4.80008C14.876 4.20591 14.3935 3.72423 13.7984 3.72423C13.2033 3.72423 12.7209 4.20591 12.7209 4.80008C12.7209 5.39426 13.2033 5.87593 13.7984 5.87593Z"
+                                    fill="#142558" />
+                                <path
+                                    d="M17.5232 3.70625C17.2918 3.10962 16.9382 2.56781 16.485 2.11549C16.0318 1.66317 15.489 1.31031 14.8914 1.0795C14.192 0.81738 13.4532 0.675648 12.7064 0.660337C11.7438 0.618421 11.4389 0.606445 8.998 0.606445C6.55709 0.606445 6.24422 0.606445 5.28965 0.660337C4.54337 0.674865 3.80507 0.816626 3.10662 1.0795C2.50882 1.31004 1.96589 1.6628 1.51266 2.11516C1.05943 2.56751 0.705915 3.10946 0.474789 3.70625C0.21221 4.40446 0.0705831 5.14221 0.0559751 5.88788C0.0129942 6.84796 0 7.15235 0 9.59048C0 12.0276 -7.44727e-09 12.338 0.0559751 13.2931C0.0709685 14.0396 0.211906 14.7761 0.474789 15.4757C0.706564 16.0723 1.06042 16.614 1.51376 17.0663C1.9671 17.5186 2.50995 17.8715 3.10762 18.1025C3.80474 18.3751 4.54335 18.527 5.29165 18.5516C6.25422 18.5935 6.55908 18.6064 9 18.6064C11.4409 18.6064 11.7538 18.6064 12.7084 18.5516C13.4551 18.5364 14.1939 18.395 14.8934 18.1334C15.4909 17.902 16.0335 17.5489 16.4866 17.0964C16.9398 16.644 17.2935 16.1022 17.5252 15.5056C17.7881 14.807 17.929 14.0705 17.944 13.324C17.987 12.3639 18 12.0595 18 9.62142C18 7.18329 18 6.87391 17.944 5.91882C17.9324 5.16261 17.79 4.41408 17.5232 3.70625ZM16.3058 13.2192C16.2993 13.7944 16.1942 14.3642 15.9949 14.9039C15.8448 15.2919 15.615 15.6444 15.3203 15.9385C15.0255 16.2325 14.6724 16.4618 14.2837 16.6114C13.7491 16.8095 13.1845 16.9145 12.6144 16.9218C11.6648 16.9657 11.3969 16.9767 8.96202 16.9767C6.5251 16.9767 6.27621 16.9767 5.30864 16.9218C4.73882 16.9149 4.17447 16.8099 3.64038 16.6114C3.25024 16.4627 2.89571 16.2339 2.59973 15.9397C2.30375 15.6456 2.07291 15.2927 1.92215 14.9039C1.72568 14.37 1.62059 13.8069 1.61128 13.2382C1.5683 12.2901 1.55831 12.0226 1.55831 9.59148C1.55831 7.15934 1.55831 6.91084 1.61128 5.94377C1.61774 5.36894 1.72289 4.79948 1.92215 4.26014C2.22701 3.47271 2.85173 2.85295 3.64038 2.55156C4.17473 2.35409 4.73892 2.24912 5.30864 2.24118C6.25922 2.19826 6.5261 2.18629 8.96202 2.18629C11.3979 2.18629 11.6478 2.18629 12.6144 2.24118C13.1845 2.24802 13.7492 2.35302 14.2837 2.55156C14.6724 2.70153 15.0255 2.931 15.3202 3.22524C15.6149 3.51948 15.8447 3.87199 15.9949 4.26014C16.1914 4.79402 16.2964 5.3571 16.3058 5.92581C16.3487 6.87491 16.3597 7.14138 16.3597 9.57351C16.3597 12.0046 16.3597 12.2661 16.3167 13.2202H16.3058V13.2192Z"
+                                    fill="#142558" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section ends here -->
+
+
+</body>
+
+</html>

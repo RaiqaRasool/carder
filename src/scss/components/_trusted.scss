@@ -1,0 +1,37 @@
+.trusted {
+    background-image: url("./assets/img/commas.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #F9F9F9;
+    ;
+
+    .trusted-container {
+        .content-box {
+            @include center;
+            flex-direction: column;
+            position: relative;
+            padding: 192px 0px;
+            text-align: center;
+            gap: 24px;
+
+            @include tablet-and-smaller {
+                padding: 144px 0px;
+            }
+
+            .heading {
+                color: $dark-blue;
+                font-size: $font-36;
+            }
+
+            .quote {
+                opacity: 0.7;
+                font-size: $font-20;
+            }
+
+            .quoter {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import url("https://use.typekit.net/dqu1mzf.css");
+// main
+@import "./media/";
+@import "./variables/";
+@import "./mixins/";
+
+// components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/savetime";
+@import "./components/bringinnovation";
+@import "./components/doyourself";
+@import "./components/trusted";
+@import "./components/credit";
+@import "./components/footer";
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    @include width-1024 {
+        font-size: 14px;
+    }
+
+    @include phone-only {
+        font-size: 11px;
+    }
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+    color: $dark-blue;
+    font-family: noto-sans-display, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+.container {
+    width: 80%;
+
+    @include tablet-and-smaller {
+        width: 85%;
+    }
+}
+
+.container-two {
+    @include space-between;
+    flex-wrap: wrap;
+
+    .content-box {
+        width: 69%;
+    }
+
+    .image-box {
+        width: 29%;
+    }
+
+    @include tablet-and-smaller {
+        .content-box {
+            width: 100%;
+        }
+
+        .image-box {
+            width: 100%;
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 24px;
+
+    @include tablet-and-smaller {
+        @include center;
+    }
+
+    .save-btn {
+        background-color: $blue;
+        color: $white;
+        font-size: 20px;
+        font-weight: $weight-700;
+        padding: 16px 32px;
+        border-radius: 8px;
+    }
+
+}

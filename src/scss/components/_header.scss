@@ -1,0 +1,153 @@
+.header {
+    font-size: 16px;
+    height: 72px;
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    z-index: 10000000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    .header-container {
+        @include space-between;
+
+        .logo {
+            width: 15%;
+        }
+
+
+        .nav {
+            @include space-between;
+            flex-grow: 1;
+            font-weight: $weight-600;
+
+
+            .nav-menu {
+                @include flex-align;
+                gap: 24px;
+
+                .nav-item {
+                    .nav-link {
+                        color: $dark-blue;
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+
+            .non-menu {
+                @include space-between;
+                gap: 32px;
+
+                .lang {
+                    @include center;
+                    cursor: pointer;
+                }
+
+                .nav-btns {
+                    @include space-between;
+                    gap: 24px;
+
+                    .login {
+                        color: $blue;
+                    }
+
+                    .sign-up {
+                        color: $white;
+                        background: linear-gradient(91.9deg, #007AFF 1.98%, #4DA2FF 101.08%);
+                        padding: 8px 16px;
+                        border-radius: 8px;
+                        @include center;
+                    }
+                }
+            }
+
+        }
+
+        #menu-icon {
+            display: none;
+        }
+
+    }
+}
+
+
+// mobile menu
+
+.header {
+    @include width-1024 {
+
+        .header-container {
+            width: 100%;
+
+            .logo {
+                margin-left: 10%;
+            }
+
+            .nav {
+                z-index: 100000;
+                top: 72px;
+                height: 100vh;
+                border-top: 1px solid rgba(20, 37, 88, 0.03);
+                border-bottom: 1px solid rgba(20, 37, 88, 0.1);
+                background: $light-grey-bg;
+                position: absolute;
+                padding: 50px 0px;
+                flex-direction: column;
+                width: 100%;
+                row-gap: 24px;
+                justify-content: flex-start;
+                transition: all 0.4s ease-in-out;
+
+                .nav-menu {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+
+                .non-menu {
+                    margin-left: -14px;
+                    align-items: flex-start;
+                    position: relative;
+                    flex-direction: column-reverse;
+
+                    .nav-btns {
+                        align-items: flex-start;
+                        flex-direction: column;
+                        row-gap: 24px;
+
+                        .login,
+                        .sign-up {
+                            padding: 0px;
+                            color: $dark-blue;
+                            background: transparent;
+                        }
+                    }
+
+                }
+            }
+
+            #menu-icon {
+                @include center;
+                border: 1px solid rgba(20, 37, 88, 0.3);
+                border-radius: 4px;
+                font-size: 32px;
+                width: 48px;
+                height: 48px;
+                cursor: pointer;
+                margin: 10%;
+
+                .fa-solid {
+                    transition: all 0.2s ease-in;
+                }
+
+                .fa-xmark {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+}

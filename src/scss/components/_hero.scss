@@ -1,0 +1,108 @@
+.hero {
+    @include padding-64;
+    background-color: $blue;
+    border-radius: 0px 0px 13vw 13vw;
+
+    .hero-container {
+        @include space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        .image-box {
+            margin-top: 64px;
+            @include center;
+            width: 28%;
+
+            .back-img {
+                overflow: visible;
+                position: relative;
+
+                image {
+                    transform: translateX(51px);
+
+                }
+
+                .front-img {
+                    position: absolute;
+                    transform: translate(-16px, 5px);
+                    transition: all 0.5s ease-in-out;
+
+                    &:hover {
+                        transform: translateX(-43px)
+                    }
+                }
+            }
+        }
+
+        .content-box {
+            width: 68%;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .hero-heading {
+                font-weight: $weight-700;
+                font-size: $font-36;
+            }
+
+            .hero-subheading {
+                font-size: $font-24;
+            }
+        }
+    }
+}
+
+
+
+
+//btns
+
+.purchase-btns {
+    @include flex-align;
+    gap: 24px;
+
+    .btn {
+        width: 140.72px;
+        height: 50px;
+        @include center;
+        gap: 7px;
+        color: black;
+        background: #FFFFFF;
+        border: 2px solid #E8E8E8;
+        box-shadow: 0px 33px 51px rgba(0, 0, 0, 0.08), 0px 9.94853px 15.375px rgba(0, 0, 0, 0.0582218), 0px 4.13211px 6.38599px rgba(0, 0, 0, 0.0399899), 0px 1.4945px 2.30969px rgba(0, 0, 0, 0.0268173);
+        border-radius: 4px;
+
+        .btn-content {
+            .top-content {
+                font-size: 10px;
+                font-weight: $weight-500;
+            }
+
+            .bottom-content {
+                font-size: 14px;
+                font-weight: $weight-700;
+            }
+        }
+    }
+}
+
+
+//responsiveness
+.hero {
+    @include width-1024 {
+        .hero-container {
+
+            .image-box {
+                width: 100%;
+            }
+
+            .content-box {
+                text-align: center;
+                @include center;
+                width: 100%;
+            }
+        }
+
+    }
+}

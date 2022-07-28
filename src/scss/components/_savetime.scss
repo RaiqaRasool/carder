@@ -1,0 +1,205 @@
+$anim-time: 3s;
+$color-func: step-end;
+$anim-func: ease-in-out;
+$delay: 2s;
+
+
+.save-time {
+    background: linear-gradient(180deg, rgba(242, 242, 247, 0) 54.17%, #F2F2F7 100%);
+
+    .save-time-container {
+        @include padding-96;
+        @include space-between;
+        align-items: center;
+
+        .content-box {
+            color: $dark-blue;
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+
+            .heading {
+                font-weight: $weight-700;
+                font-size: $font-36;
+            }
+
+            .subheading {
+                font-size: $font-20;
+                opacity: 0.7;
+            }
+
+
+        }
+
+        .animation-box {
+            @include tablet-and-smaller {
+                margin-top: 130px;
+            }
+
+            .animation-container {
+                position: relative;
+
+                .box {
+                    position: absolute;
+                    border-radius: 9.86527px;
+                    animation: boxanim $anim-time $color-func $delay infinite;
+                }
+
+                @keyframes boxanim {
+                    0% {
+                        background-color: #E6F2FF;
+
+                    }
+
+                    30% {
+                        background-color: #C8FACD;
+                    }
+
+                    50% {
+                        background-color: #FFE6E6;
+                    }
+
+                    70% {
+                        background-color: #E6F2FF;
+
+                    }
+
+                    95% {
+                        background-color: #E6F2FF;
+                    }
+
+
+                }
+
+                #box1 {
+                    top: -70px;
+                    width: 68.63px;
+                    height: 68.63px;
+                    border: 8.22106px solid #FFFFFF;
+                    z-index: 10;
+                    left: -20px;
+                    animation: box1-anim $anim-time $anim-func $delay infinite, box1-color $anim-time $color-func $delay infinite;
+
+                }
+
+                @keyframes box1-anim {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    30% {
+                        transform: translateX(50px);
+                    }
+
+                    50% {
+                        transform: translateX(100px);
+
+                    }
+
+                    100% {
+                        transform: translateX(0);
+
+                    }
+                }
+
+                @keyframes box1-color {
+                    0% {
+                        background-color: #E6F2FF;
+
+                    }
+
+                    30% {
+                        background-color: #C8FACD;
+                    }
+
+                    50% {
+                        background-color: #FFE6E6;
+                    }
+
+                    70% {
+                        background-color: #E6F2FF;
+
+                    }
+
+                    95% {
+                        background-color: #E6F2FF;
+                    }
+
+
+                }
+
+                #box2 {
+                    position: relative;
+                    top: -49px;
+                    z-index: -1;
+                    width: 122.74px;
+                    height: 122.74px;
+                }
+
+                #box3 {
+                    top: 85px;
+                    width: 122.74px;
+                    height: 32.53px;
+                    animation: box3-anim $anim-time $anim-func $delay infinite, box2-color $anim-time $color-func $delay infinite;
+
+                }
+
+                @keyframes box3-anim {
+                    0% {
+                        transform: translateX(-20px);
+                    }
+
+                    30% {
+                        transform: translate(0px);
+                    }
+
+                    70% {
+                        transform: translateX(20px);
+                    }
+
+                    100% {
+                        transform: translateX(-20px);
+                    }
+
+                }
+
+                @keyframes box2-color {
+                    0% {
+                        background-color: #E6F2FF;
+
+                    }
+
+                    30% {
+                        background-color: #C8FACD;
+                    }
+
+                    50% {
+                        background-color: #FFE6E6;
+                    }
+
+                    70% {
+                        background-color: #E6F2FF;
+
+                    }
+
+                    95% {
+                        background-color: #E6F2FF;
+                    }
+
+
+
+                }
+
+
+                #box4 {
+                    top: 128px;
+                    width: 122.74px;
+                    height: 51.76px;
+
+                }
+
+            }
+
+        }
+    }
+}

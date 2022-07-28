@@ -1,0 +1,69 @@
+.doyourself {
+    background-image: linear-gradient(90deg, #F0D00C 6.7%, rgba(240, 208, 12, 0) 26.77%), url("./assets/img/doyourselftdes.jpg");
+    height: 765px;
+    background-color: #F0D00C;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 40%;
+
+    @include width-1250-smaller {
+        background-position: center 40%;
+    }
+
+
+
+    @include width-1024 {
+        background-position: 45% center;
+        height: 150vh;
+
+        background-size: cover;
+        padding-bottom: 100px;
+        background-image: linear-gradient(90deg, #F0D00C 6.7%, rgba(240, 208, 12, 0) 26.77%),
+            url("./assets/img/doyourself.jpg");
+    }
+
+    .doyourself-container {
+        @include flex-align;
+        height: 100%;
+
+
+        @include width-1024 {
+            align-items: flex-end;
+            text-align: center;
+
+            .btn {
+                justify-content: center;
+            }
+
+        }
+
+        .content-box {
+            @include width-1440-smaller {
+                width: 50%;
+            }
+
+            @include width-1440-greater {
+                width: 35%;
+            }
+
+            @include width-1024 {
+                width: 100%;
+            }
+
+            .heading {
+                font-weight: $weight-700;
+                font-size: $font-53;
+            }
+
+            .body {
+                margin-top: 24px;
+                font-size: $font-20;
+                opacity: 0.7;
+            }
+
+            .btn {
+                margin-top: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin padding-64 {
+    padding: 64px 0px;
+}
+
+@mixin padding-96 {
+    padding: 96px 0px;
+
+}
