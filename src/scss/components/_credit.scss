@@ -11,20 +11,23 @@
             position: relative;
             width: 40%;
 
+
             .eclipse {
                 position: relative;
                 width: 100%;
 
+                svg {
+                    overflow: visible;
+                }
+
+                image {
+                    transform: translate(-55px, 34px);
+                    width: 130%;
+                }
+
                 .mobiles {
                     width: 100%;
-                    position: absolute;
-                    top: 0px;
-                    left: -20%;
 
-                    img {
-                        width: 150%;
-                        object-fit: contain;
-                    }
                 }
 
             }
@@ -65,13 +68,20 @@
                 font-size: $font-20;
             }
 
+            @include phone-only {
+                .credit-btns {
+                    gap: 10px;
+                }
+
+            }
+
         }
 
         @include tablet-and-smaller {
             flex-direction: column;
 
             .image-box {
-                width: 80%;
+                width: 100%;
             }
 
             .content-box {
