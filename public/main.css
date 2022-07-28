@@ -219,11 +219,16 @@
     width: 100%;
   }
   .hero .hero-container .content-box {
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+  .hero .hero-container .content-box .hero-heading {
+    text-align: center;
+  }
+  .hero .hero-container .content-box .hero-subheading {
+    text-align: center;
   }
 }
 

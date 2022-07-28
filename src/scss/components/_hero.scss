@@ -97,13 +97,19 @@
 .hero {
     @include width-1024 {
         .hero-container {
-
             .image-box {
                 width: 100%;
             }
 
             .content-box {
-                text-align: center;
+                .hero-heading {
+                    text-align: center;
+                }
+
+                .hero-subheading {
+                    text-align: center
+                }
+
                 @include center;
                 width: 100%;
             }
