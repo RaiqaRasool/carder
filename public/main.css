@@ -187,6 +187,11 @@
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 350px) {
+  .purchase-btns {
+    gap: 10px;
+  }
+}
 .purchase-btns .btn {
   width: 140.72px;
   height: 50px;
@@ -760,11 +765,6 @@
 .credit .credit-container .content-box .body {
   font-weight: 500;
   font-size: 1.25rem;
-}
-@media (max-width: 468px) {
-  .credit .credit-container .content-box .credit-btns {
-    gap: 10px;
-  }
 }
 @media (max-width: 800px) {
   .credit .credit-container {

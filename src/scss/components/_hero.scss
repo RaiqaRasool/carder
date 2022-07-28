@@ -62,6 +62,11 @@
     @include flex-align;
     gap: 24px;
 
+    @include width-350 {
+        gap: 10px;
+
+    }
+
     .btn {
         width: 140.72px;
         height: 50px;

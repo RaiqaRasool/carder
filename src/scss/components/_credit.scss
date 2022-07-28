@@ -68,12 +68,7 @@
                 font-size: $font-20;
             }
 
-            @include phone-only {
-                .credit-btns {
-                    gap: 10px;
-                }
 
-            }
 
         }
 
