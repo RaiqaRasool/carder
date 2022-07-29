@@ -25,11 +25,11 @@ requestBtn.addEventListener("click", () => {
 })
 
 
-if (featureForm.style.display != 'hidden') {
-    window.addEventListener("mouseup", (event) => {
-        if (event.target != actualForm) {
+window.addEventListener("mouseup", (event) => {
+    if (featureForm.style.display == 'flex') {
+        if (!actualForm.contains(event.target)) {
             featureForm.style.display = "none";
             document.body.style.overflow = "scroll";
         }
-    })
-}
+    }
+})
