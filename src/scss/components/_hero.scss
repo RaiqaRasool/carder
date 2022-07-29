@@ -4,7 +4,6 @@
     border-radius: 0px 0px 13vw 13vw;
 
     .top-logo {
-        margin-bottom: 80px;
         width: 100%;
         @include center;
     }
@@ -103,11 +102,6 @@
 .hero {
     @include width-1024 {
         .hero-container {
-
-            .top-logo {
-                margin-bottom: 0px;
-            }
-
             .image-box {
                 width: 100%;
             }
