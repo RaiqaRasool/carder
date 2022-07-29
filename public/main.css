@@ -811,6 +811,84 @@
   }
 }
 
+.feature-form {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.feature-form .actual-form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  gap: 16px;
+  width: 380px;
+  background: white;
+  border-radius: 6px;
+}
+@media (max-width: 400px) {
+  .feature-form .actual-form {
+    width: 90vw;
+  }
+}
+.feature-form .actual-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.feature-form .actual-form .field .lbl {
+  font-size: 12px;
+  color: black;
+}
+.feature-form .actual-form .field .input {
+  padding: 12px 16px;
+  background: #F2F2F7;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+.feature-form .actual-form .field #feature-desc {
+  resize: none;
+  font-family: noto-sans-display, sans-serif;
+}
+.feature-form .actual-form #submit-btn {
+  padding: 10px 25px;
+  color: white;
+  background: linear-gradient(91.9deg, #007AFF 1.98%, #4DA2FF 101.08%);
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: center;
+  width: 60%;
+}
+
+*::-moz-placeholder {
+  font-size: 12px;
+  color: black;
+  opacity: 0.3;
+}
+
+*:-ms-input-placeholder {
+  font-size: 12px;
+  color: black;
+  opacity: 0.3;
+}
+
+*::placeholder {
+  font-size: 12px;
+  color: black;
+  opacity: 0.3;
+}
+
 .footer {
   background-color: #142558;
   color: white;
