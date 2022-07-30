@@ -86,6 +86,7 @@
                 text-align: center;
                 flex-direction: column;
 
+
                 .heading {
                     color: $dark-blue;
                     font-weight: $weight-700;
@@ -98,6 +99,7 @@
                     background-color: $blue;
                     border-radius: 8px;
                     color: $white;
+                    cursor: pointer;
                     font-size: $font-20;
                     font-weight: $weight-700;
                 }

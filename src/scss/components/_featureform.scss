@@ -4,10 +4,13 @@
     bottom: 0px;
     width: 100vw;
     height: 100vh;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease-in-out;
     @include center;
     display: none;
+    animation: fade 2s linear;
+
 
 
     .actual-form {
@@ -69,5 +72,20 @@
     font-size: 12px;
     color: black;
     opacity: 0.3;
+
+}
+
+.anim-featureform {
+    animation: fade 0.4s linear;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 
 }

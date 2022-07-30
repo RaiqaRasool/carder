@@ -18,8 +18,10 @@
 const requestBtn = document.querySelector(".request-btn");
 const featureForm = document.querySelector(".feature-form");
 const actualForm = document.querySelector(".actual-form");
+const animFeatureForm = document.querySelector("anim-featureform");
 
 requestBtn.addEventListener("click", () => {
+    featureForm.classList.add("anim-featureform");
     featureForm.style.display = "flex";
     document.body.style.overflow = "hidden";
 })
@@ -33,3 +35,4 @@ window.addEventListener("mouseup", (event) => {
         }
     }
 })
+
